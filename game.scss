@@ -1,0 +1,553 @@
+@import "nullstyle.scss";
+
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$red2: #f89393;
+$blue: #374785;
+
+
+@keyframes hello {
+    0% {
+        color: $red;
+        visibility: visible;
+        transform: scale(0, 0) translateY(100px);
+    }
+
+    20% {
+        color: white;
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        color: white;
+        visibility: visible;
+    }
+
+}
+
+
+@keyframes lets__start_button {
+    0% {
+        transform: scale(0, 0);
+        visibility: visible;
+    }
+
+    20% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+        visibility: visible;
+    }
+}
+
+@keyframes background_anim {
+    0% {
+        transform: translateX(0px) rotate(-45deg);
+        border-color: $red2;
+
+    }
+
+    100% {
+        transform: translateX(-120px) rotate(-45deg);
+        border-color: $red2;
+
+    }
+}
+
+@keyframes paper {
+    0% {
+
+        top: 0%;
+    }
+
+    100% {
+
+        top: 100%;
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+
+
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $red;
+    color: $blue;
+    position: relative;
+    overflow: hidden;
+
+    .nav {
+        .nav__menu {
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0.8vw;
+            z-index: 10;
+
+            & a {
+                display: block;
+                padding: 1vw;
+
+
+                &:hover img {
+                    transform: rotateY(180deg);
+                    transition: all 0.6s ease 0s;
+                }
+
+                & img {
+                    width: 4.5vw;
+                }
+            }
+        }
+
+        .nav__fullscreen {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: $blue;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease 0s;
+            z-index: 3;
+
+            &:target {
+                visibility: visible;
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+
+            &:target .nav__menu-list {
+                transform: translate(0, 0);
+            }
+
+            &:target .nav__body {
+                transform: translate(0, 0);
+            }
+
+            &:target .nav__fullscreen_pic img {
+                transform: translate(0, 0);
+            }
+
+            .nav__body {
+                position: relative;
+                min-height: 100%;
+                padding: 3vw;
+                transition: all 0.6s ease 0.2s;
+            }
+
+            .nav__menu-list {
+                line-height: 2;
+                position: absolute;
+                transform: translate(0px, -300%);
+                transition: all 0.6s ease 0s;
+
+                & a {
+                    color: #fff;
+                    font-size: 4.5vw;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease 0s;
+
+                    &:hover {
+                        color: $yellow;
+                        font-size: 5vw;
+                    }
+                }
+            }
+
+            .nav__fullscreen_pic img {
+                position: absolute;
+                max-width: 32vw;
+                transform: translate(0px, 300%);
+                transition: all 0.6s ease 0s;
+            }
+
+            .nav__fullscreen_close {
+                position: absolute;
+                top: 15vh;
+                right: 10vw;
+                font-size: 5vw;
+                text-decoration: none;
+                color: #fff;
+                z-index: 1;
+                transition: all 0.2s ease 0s;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                    transition: all 0.6s ease 0s;
+                }
+            }
+        }
+    }
+
+    .background__animation {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+
+        & .background__animation-main {
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 0;
+            }
+        }
+
+
+        .waves__row-1,
+        .waves__row-2,
+        .waves__row-3,
+        .waves__row-4,
+        .waves__row-5 {
+
+            display: flex;
+            gap: 34px;
+            width: 1000%;
+        }
+
+        .wave {
+            width: 200px;
+            height: 200px;
+            border-top: 20px solid $blue;
+            border-right: 20px solid $blue;
+            border-radius: 15px;
+            margin: 10px;
+            animation: background_anim 4s ease-in-out infinite alternate-reverse;
+        }
+    }
+
+
+    .game {
+        & * {
+            z-index: 2;
+        }
+
+        .inrodaction__first-section_hello {
+            visibility: hidden;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 15vh;
+            left: 10vw;
+            font-size: 10vw;
+
+            & p {
+                display: inline-block;
+                animation: hello 2s ease 1 normal 0s forwards;
+            }
+
+        }
+
+        .inrodaction__first-section_lets-play {
+            visibility: hidden;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 35vh;
+            left: 10vw;
+            font-size: 10vw;
+
+            & p {
+                display: inline-block;
+                animation: hello 2s ease 1 normal 1s forwards;
+            }
+
+        }
+
+        .inrodaction__first-section_start {
+            visibility: hidden;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 10vw;
+            top: 70vh;
+
+
+            & p {
+                padding: 0px 7.5vh;
+                border: 0.75vh solid $blue;
+                display: inline-block;
+                animation: lets__start_button 2s ease 1 normal running 2s forwards;
+                background-color: $red;
+            }
+
+            & button {
+                font-size: 10vw;
+                color: $blue;
+
+
+
+                &:hover {
+                    color: white;
+                    transition: all 0.6s ease 0s;
+                }
+
+            }
+
+        }
+
+        .inrodaction__second-section {
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            width: 100%;
+            height: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+
+            .inrodaction__second-section_hero {
+                display: block;
+                max-height: 80vh;
+                max-width: 50vw;
+                margin: 10vh 10vw;
+                transform: translate(0, -600px);
+                transition: all 0.6s ease 0.2s;
+            }
+
+
+            form {
+                display: block;
+                padding: 0 0 0 3vh;
+                width: 50%;
+                color: $red;
+                transform: translate(0, 600px);
+                transition: all 0.6s ease 0.2s;
+
+
+                input {
+                    width: 80%;
+                    color: $red;
+                    padding: 1.5vh;
+                    text-align: center;
+                    font-size: 5vw;
+                }
+
+                button {
+                    padding: 1.5vh;
+                    width: 80%;
+                    color: $blue;
+                    background-color: $red;
+                    font-size: 5vw;
+                    border: 0.75vh solid $blue;
+
+                    &:hover {
+                        background-color: $red;
+                        color: white;
+                        transition: all 0.6s ease 0s;
+                    }
+                }
+            }
+        }
+
+        .inrodaction__third-section {
+            visibility: hidden;
+            opacity: 0;
+
+            position: absolute;
+            margin: 20vh 20vw;
+
+            .inrodaction__third-section_text {
+                padding: 1.5vh;
+                color: white;
+                border: 0.75vh solid white;
+                background-color: $red;
+                transform: translate(600px, 0px);
+                transition: all 0.6s ease 0.2s;
+            }
+
+            .inrodaction__third-section_hello {
+                display: block;
+                font-size: 6.5vw;
+                color: $blue;
+
+            }
+
+            .inrodaction__third-section_rools {
+                display: block;
+                font-size: 2.7vw;
+
+            }
+
+            button {
+                display: block;
+                font-size: 7vw;
+                padding: 1.5vh;
+                color: white;
+                border: 0.75vh solid $blue;
+                background-color: $red;
+                width: 100%;
+                margin-top: 8vh;
+                transform: translate(-600px, 0px);
+                transition: all 0.6s ease 0.2s;
+
+                &:hover {
+                    color: $blue;
+                    border-color: white;
+                    transition: all 0.6s ease 0s;
+                }
+            }
+        }
+
+
+        .inactive {
+            display: none;
+            visibility: hidden;
+            transition: all 0.5s ease 0s;
+        }
+
+        .active {
+            display: block;
+            visibility: visible;
+            transition: all 0.5s ease 0s;
+        }
+
+        .game__process {
+            display: none;
+
+
+            .game__process_window {
+                position: absolute;
+                top: 15vh;
+                left: 10vw;
+                width: 80vw;
+                height: 70vh;
+                background-color: $red;
+                border: 0.75vh solid $blue;
+                overflow: hidden;
+
+                .background-image {
+                    position: absolute;
+                    top: 15vh;
+                    left: 0;
+
+                    & img {
+                        width: 80vw;
+                        height: 70vh;
+                    }
+                }
+
+                .hero {
+                    width: 5vw;
+                    height: 8vh;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0%;
+
+                    img {
+                        max-width: 5vw;
+                    }
+                }
+
+                .paper {
+                    font-size: 0.8vw;
+                    overflow: hidden;
+                    padding: 0.4vw;
+                    box-shadow: 0.4vh 0.4vh $blue;
+                    width: 3vw;
+                    height: 5vh;
+                    background-color: white;
+                    position: absolute;
+                    border-radius: 0.5vw;
+                    left: 50%;
+                    top: 0%;
+                    animation: paper 2s ease 1 normal 1s forwards;
+                }
+
+            }
+
+            .game__process_bar {
+                position: absolute;
+                top: 86vh;
+                left: 10vw;
+                width: 80vw;
+                display: flex;
+                justify-content: space-between;
+                font-size: 7.5vh;
+                color: white;
+
+                .game__process_bar-points {
+                    display: flex;
+
+                    & img {
+                        max-height: 13vh;
+                        width: auto;
+                    }
+                }
+
+                .game__process_bar-health {
+                    display: flex;
+
+
+                    & img {
+                        display: block;
+                        max-height: 13vh;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .game__over {
+            display: none;
+
+            .game__over_window {
+                position: absolute;
+                top: 15vh;
+                left: 10vw;
+                width: 80vw;
+                height: 70vh;
+                background-color: white;
+                border: 0.75vh solid $blue;
+                overflow: hidden;
+
+                p {
+                    padding: 3vw 4vw;
+                    font-size: 9vw;
+                }
+
+                .game__over_buttons {
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        margin: 1vw 3vw;
+                        padding: 2vw;
+                        font-size: 9vw;
+                        background-color: white;
+                        color: $blue;
+                        border: 0.75vh solid $red;
+
+                        &:hover {
+                            color: white;
+                            background-color: $red;
+                            transition: all 0.5s ease 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
