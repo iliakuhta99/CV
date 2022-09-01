@@ -193,12 +193,7 @@ body h2 {
   color: #fff;
 }
 .header #background_video {
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  overflow: hidden;
-  z-index: -1;
+  display:none;
 }
 .header .header__main .header__welcome-text {
   color: #fff;
