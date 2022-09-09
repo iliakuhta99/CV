@@ -1,0 +1,545 @@
+@import "nullstyle.scss";
+
+$yellow: #f8e9a1;
+$red: #f76c6c;
+$red2: #f89393;
+$blue: #374785;
+
+
+@keyframes hello {
+    0% {
+        color: $red;
+        visibility: visible;
+        transform: scale(0, 0) translateY(100px);
+    }
+
+    20% {
+        color: white;
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        color: white;
+        visibility: visible;
+    }
+
+}
+
+
+@keyframes lets__start_button {
+    0% {
+        transform: scale(0, 0);
+        visibility: visible;
+    }
+
+    20% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+        visibility: visible;
+    }
+}
+
+@keyframes paper {
+    0% {
+
+        top: 0%;
+    }
+
+    100% {
+
+        top: 100%;
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+
+    span {
+        color: transparent;
+        -webkit-text-stroke: 1px #Fff;
+        text-stroke: 1px #Fff;
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-70deg, rgb(247, 108, 108) 15%, rgb(55, 71, 133) 75%);
+    color: $blue;
+    position: relative;
+    overflow: hidden;
+
+    .nav {
+        .nav__menu {
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0.8vw;
+            z-index: 10;
+
+            & a {
+                display: block;
+                padding: 1vw;
+
+                &:hover img {
+                    transform: rotateY(180deg);
+                    transition: all 0.6s ease 0s;
+                }
+
+                & img {
+                    width: 4.5vw;
+                }
+            }
+        }
+
+        .nav__fullscreen {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(-70deg, rgb(247, 108, 108) 15%, rgb(55, 71, 133) 75%);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease 0s;
+            z-index: 3;
+
+            &:target {
+                visibility: visible;
+                opacity: 1;
+                transform: translate(0px, 0px);
+            }
+
+            &:target .nav__menu-list {
+                transform: translate(0, 0);
+            }
+
+            &:target .nav__body {
+                transform: translate(0, 0);
+            }
+
+            &:target .nav__fullscreen_pic img {
+                transform: translate(0, 0);
+            }
+
+            .nav__body {
+                position: relative;
+                min-height: 100%;
+                padding: 3vw;
+                transition: all 0.6s ease 0.2s;
+            }
+
+            .nav__menu-list {
+                line-height: 2;
+                position: absolute;
+                transform: translate(0px, -300%);
+                transition: all 0.6s ease 0s;
+
+                & a {
+                    color: #fff;
+                    font-size: 4.5vw;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease 0s;
+
+                    &:hover {
+                        color: $red;
+                        font-size: 5vw;
+                    }
+                }
+            }
+
+            .nav__fullscreen_pic img {
+                position: absolute;
+                max-width: 32vw;
+                transform: translate(0px, 300%);
+                transition: all 0.6s ease 0s;
+            }
+
+            .nav__fullscreen_close {
+                position: absolute;
+                top: 15vh;
+                right: 10vw;
+                font-size: 5vw;
+                text-decoration: none;
+                color: #fff;
+                z-index: 1;
+                transition: all 0.2s ease 0s;
+
+                &:hover {
+                    transform: rotateY(180deg);
+                    transition: all 0.6s ease 0s;
+                }
+            }
+        }
+    }
+
+    .game {
+        .inrodaction__first-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 12vw;
+            height: 100vh;
+
+            font-weight: bold;
+            text-align: left;
+            text-transform: uppercase;
+            line-height: 0.8;
+
+            .inrodaction__first-section_hello {
+                visibility: hidden;
+                font-size: 10vw;
+
+                & p {
+                    display: inline-block;
+                    animation: hello 2s ease 1 normal 0s forwards;
+                }
+            }
+
+            .inrodaction__first-section_lets-play {
+                visibility: hidden;
+                font-size: 11vw;
+
+                & p {
+                    display: inline-block;
+                    animation: hello 2s ease 1 normal 1s forwards;
+
+                    span {
+                        font-size: 12.5vw;
+                    }
+                }
+
+            }
+
+            .inrodaction__first-section_buttons {
+                visibility: hidden;
+
+                .inrodaction__first-section_fullscreen-button {
+                    font-size: 10vw;
+                    color: #fff;
+                    margin-bottom: 2.8vh;
+
+                    img {
+                        padding: 1.5vw 12vw;
+                        border: 0.4vh solid #fff;
+                        animation: lets__start_button 2s ease 1 normal running 2s forwards;
+                        max-width: 31.6vw;
+
+                        &:hover {
+                            background-color: rgb(55, 71, 133, 0.5);
+                            transition: all 0.6s ease 0s;
+                        }
+                    }
+                }
+
+                .inrodaction__first-section_start-button {
+                    font-size: 10vw;
+                    color: transparent;
+                    -webkit-text-stroke: 2px $blue;
+                    text-stroke: 2px $blue;
+                    margin-top: 2.8vh;
+
+                    &:hover {
+                        color: $blue;
+                        transition: all 0.6s ease 0s;
+                    }
+
+                    p {
+                        padding: 0px 3vw;
+                        border: 0.4vh solid $blue;
+                        display: inline-block;
+                        animation: lets__start_button 2s ease 1 normal running 2s forwards;
+                    }
+                }
+
+            }
+        }
+
+        .inrodaction__second-section {
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .inrodaction__second-section_hero img {
+                max-height: 70vh;
+                transform: translate(0, -600px);
+                transition: all 0.6s ease 0.2s;
+            }
+
+            .introdaction__second-section_look {
+                display: grid;
+
+                img {
+                    max-height: 9vh;
+                    padding: 2vh 1vw;
+                    margin: 0.4vh 0;
+                    border: 0.4vh solid #fff;
+                }
+
+                p {
+                    font-size: 1vw;
+                    padding: 1vw 0;
+                }
+            }
+
+            form {
+                display: block;
+                width: 40%;
+                color: $red;
+                transform: translate(0, 600px);
+                transition: all 0.6s ease 0.2s;
+
+                input {
+                    width: 100%;
+                    color: $red;
+                    padding: 1.5vh;
+                    text-align: center;
+                    font-size: 5vw;
+                }
+
+                .inrodaction__second-section_button_m {
+                    padding: 1.5vh;
+                    width: 49%;
+                    color: #fff;
+                    font-size: 5vw;
+                    border: 0.4vh solid $red;
+                    background-color: transparent;
+
+                    &:hover span {
+                        color: #fff;
+                        transition: all 0.6s ease 0s;
+                    }
+                }
+
+                .inrodaction__second-section_button_f {
+                    padding: 1.5vh;
+                    width: 49%;
+                    color: #fff;
+                    font-size: 5vw;
+                    border: 0.4vh solid $red;
+                    background-color: transparent;
+
+                    &:hover span {
+                        color: #fff;
+                        transition: all 0.6s ease 0s;
+                    }
+                }
+
+                .inrodaction__second-section_button_go {
+                    padding: 1.5vh;
+                    width: 100%;
+                    color: transparent;
+                    -webkit-text-stroke: 1px #Fff;
+                    text-stroke: 1px #Fff;
+                    font-size: 5vw;
+                    border: 0.4vh solid $red;
+                    background-color: transparent;
+
+                    &:hover {
+                        color: #fff;
+                        transition: all 0.6s ease 0s;
+                    }
+                }
+            }
+        }
+
+        .inrodaction__third-section {
+            visibility: hidden;
+            opacity: 0;
+            margin: 20vw auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+
+            .inrodaction__third-section_text {
+                padding: 1.5vh;
+                color: white;
+                border: 0.4vh solid white;
+                transform: translate(600px, 0px);
+                transition: all 0.6s ease 0.2s;
+            }
+
+            .inrodaction__third-section_hello {
+                display: block;
+                font-size: 6.5vw;
+                color: $red;
+            }
+
+            .inrodaction__third-section_rools {
+                display: block;
+                font-size: 2.7vw;
+            }
+
+            button {
+                display: block;
+                font-size: 7vw;
+                padding: 1.5vh;
+                color: transparent;
+                -webkit-text-stroke: 1px #Fff;
+                text-stroke: 1px #Fff;
+                border: 0.4vh solid #fff;
+                width: 100%;
+                margin-top: 8vh;
+                transform: translate(-600px, 0px);
+                transition: all 0.6s ease 0.2s;
+                background-color: transparent;
+
+                &:hover {
+                    color: #fff;
+                    transition: all 0.6s ease 0s;
+                }
+            }
+        }
+
+        .inactive {
+            display: none;
+            visibility: hidden;
+            transition: all 0.5s ease 0s;
+        }
+
+        .active {
+            display: block;
+            visibility: visible;
+            transition: all 0.5s ease 0s;
+        }
+
+        .game__process {
+            display: none;
+
+            .game__process_window {
+                position: absolute;
+                top: 15vh;
+                left: 10vw;
+                width: 80vw;
+                height: 70vh;
+                background-color: rgb(247, 108, 108, 0.5);
+                border: 0.4vh solid $blue;
+                overflow: hidden;
+
+                .background-image {
+                    position: absolute;
+                    top: 15vh;
+                    left: 0;
+                    opacity: 0.4;
+
+                    & img {
+                        width: 80vw;
+                        height: 70vh;
+                    }
+                }
+
+                .hero {
+                    width: 5vw;
+                    height: 8vh;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0%;
+
+                    img {
+                        max-width: 5vw;
+                        height: auto;
+                    }
+                }
+
+                .paper {
+                    font-size: 0.8vw;
+                    overflow: hidden;
+                    padding: 0.4vw;
+                    box-shadow: 0.4vh 0.4vh $blue;
+                    width: 3vw;
+                    height: 5vh;
+                    background-color: white;
+                    position: absolute;
+                    border-radius: 0.5vw;
+                    left: 50%;
+                    top: 0%;
+                    animation: paper 2s ease 1 normal 1s forwards;
+                    opacity: 0;
+                }
+
+            }
+
+            .game__process_bar {
+                position: absolute;
+                top: 86vh;
+                left: 10vw;
+                width: 80vw;
+                display: flex;
+                justify-content: space-between;
+                font-size: 7.5vh;
+                color: white;
+
+                .game__process_bar-points {
+                    display: flex;
+
+                    & img {
+                        max-height: 13vh;
+                        width: auto;
+                    }
+                }
+
+                .game__process_bar-health {
+                    display: flex;
+
+                    & img {
+                        display: block;
+                        max-height: 13vh;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .game__over {
+            display: none;
+
+            .game__over_window {
+                position: absolute;
+                top: 15vh;
+                left: 10vw;
+                width: 80vw;
+                height: 70vh;
+                background-color: white;
+                border: 0.75vh solid $blue;
+                overflow: hidden;
+
+                p {
+                    padding: 3vw 4vw;
+                    font-size: 7vw;
+                }
+
+                .game__over_buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    button {
+                        margin: 1vw 3vw;
+                        padding: 1vw;
+                        font-size: 9vw;
+                        background-color: white;
+                        color: $blue;
+                        border: 0.4vh solid $red;
+
+                        &:hover {
+                            color: white;
+                            background-color: $red;
+                            transition: all 0.5s ease 0s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
