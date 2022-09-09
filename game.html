@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CV game</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css" media="screen and (min-aspect-ratio:1/1)">
+    <link rel="stylesheet" href="game2.css" media="screen and (max-aspect-ratio:1/1)">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav">
+            <div class="nav__menu">
+                <a href="index.html"><img src="img/nav/home.PNG" id="home"></a>
+                <a href="#nav__fullscreen"><img src="img/nav/menu.PNG" id="menu"></a>
+            </div>
+            <div class="nav__fullscreen" id="nav__fullscreen">
+                <a class="nav__fullscreen_close" href="#nav__menu">X</a>
+                <div class="nav__body">
+                    <div class="nav__menu-list">
+                        <a href="index.html">Główna</a> <br>
+                        <a href="index.html#footer">Kontakt</a> <br>
+                        <a href="game.html">Zagraj w grę!</a> <br>
+                    </div>
+                    <div class="nav__fullscreen_pic">
+                        <img src="img/nav/typing.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="game">
+            <div class="game__introdaction">
+                <div class="inrodaction__first-section">
+                    <div class="introdaction__first-section_text">
+                        <div class="inrodaction__first-section_hello">
+                            <p>Hi<span>!</span> Let's </p>
+                        </div>
+                        <div class="inrodaction__first-section_lets-play">
+                            <p><span>play</span> </p>
+                            <p>a </p>
+                            <p>game <span>;)</span> </p>
+                        </div>
+                    </div>
+                    <div class="inrodaction__first-section_buttons">
+                        <button class="inrodaction__first-section_fullscreen-button">
+                            <img src="img/game/fullscreen_pic.PNG">
+                        </button>
+                        <button class="inrodaction__first-section_start-button">
+                            <p>Start!</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="inrodaction__second-section">
+                    <form class="inrodaction__second-section_form">
+                        <input type="text" value="name" maxlength="10">
+                        <br><br>
+                        <button class="inrodaction__second-section_button_m">
+                            <span>M</span>
+                        </button>
+                        <button class="inrodaction__second-section_button_f">
+                            <span>F</span>
+                        </button>
+                        <br><br>
+                        <button class="inrodaction__second-section_button_go">
+                            Let's go!
+                        </button>
+                    </form>
+                    <div class="inrodaction__second-section_hero">
+                        <img src="img/game/hero.PNG" alt="hero">
+
+                    </div>
+                    <div class="introdaction__second-section_look">
+                        <p>drag&drop</p>
+                        <img src="img/hero_looks/red_t-shirt.PNG" alt="" class="look_red">
+                        <img src="img/hero_looks/blue_t-shirt.PNG" alt="" class="look_blue">
+                        <img src="img/hero_looks/light-blue_t-shirt.PNG" alt="" class="look_light-blue">
+                        <img src="img/hero_looks/yellow_t-shirt.PNG" alt="" class="look_yellow">
+                        <img src="img/hero_looks/green_t-shirt.PNG" alt="" class="look_green">
+                        <img src="img/hero_looks/black_t-shirt.PNG" alt="" class="look_black">
+                        <p>drag&drop</p>
+                    </div>
+                </div>
+                <div class="inrodaction__third-section">
+                    <div class="inrodaction__third-section_text">
+                        <p class="inrodaction__third-section_hello"></p>
+                        <p class="inrodaction__third-section_rools">Now you are a junior front-end developer, and you
+                            are looking for
+                            a
+                            job.
+                            Try to collect as many job
+                            offers as possible!</p>
+                    </div>
+                    <button>Start</button>
+                </div>
+            </div>
+            <div class="game__process">
+                <div class="game__process_bar">
+                    <div class="game__process_bar-name">Digson</div>
+                    <div class="game__process_bar-points">
+                        <img src="img/game/job-offer_icon.PNG">
+                        <p>0</p>
+                    </div>
+                    <div class="game__process_bar-health">
+                        <div class="health_1"><img src="img/game/health_icon.PNG" class="game__process_bar-health-3">
+                        </div>
+                        <div class="health_2"><img src="img/game/health_icon.PNG" class="game__process_bar-health-2">
+                        </div>
+                        <div class="health_3"><img src="img/game/health_icon.PNG" class="game__process_bar-health-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="game__process_main">
+                    <div class="game__process_window">
+                        <div class="background-image"><img src="img/game/game_background.PNG"></div>
+                        <div class="hero"><img src=""></div>
+                        <div class="paper">Job <br> offer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="game__over">
+                <div class="game__over_window">
+                    <p>Your score:</p>
+                    <div class="game__over_buttons">
+                        <button class="repeat">repeat</button>
+                        <button class="home">home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>
