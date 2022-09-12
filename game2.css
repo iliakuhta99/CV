@@ -306,7 +306,7 @@ body span {
   visibility: hidden;
   font-size: 20vw;
   position: absolute;
-  top: 37vh;
+  top: 37.5vh;
   left: 12vw;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_lets-play p {
@@ -351,8 +351,8 @@ body span {
 }
 .container .game .inrodaction__second-section .inrodaction__second-section_hero img {
   position: absolute;
-  top: 33vh;
-  max-height: 42vh;
+  top: 35vh;
+  max-height: 41vh;
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, 0);
