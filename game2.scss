@@ -144,14 +144,24 @@ body {
                 transform: translate(0px, -300%);
                 transition: all 0.6s ease 0s;
 
-                & a {
-                    color: #fff;
+
+                & li {
+                    a {
+                        color: #fff;
+                    }
+
+                    display:flex;
+                    height:9vh;
                     font-size: 10vw;
                     text-transform: uppercase;
                     transition: all 0.2s ease 0s;
 
-                    &:active {
-                        color: $red;
+
+                    &:hover {
+                        a {
+                            color: $red;
+                        }
+
                         font-size: 11vw;
                     }
                 }
@@ -265,7 +275,7 @@ body {
 
             .inrodaction__second-section_hero img {
                 position: absolute;
-                top: 35vh;
+                top: 36vh;
                 max-height: 41vh;
                 left: 50%;
                 margin-right: -50%;

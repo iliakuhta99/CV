@@ -187,14 +187,14 @@ body span {
   display: block;
   padding: 1vw;
 }
-.container .nav .nav__menu a:active img {
+.container .nav .nav__menu a:hover img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
 }
 .container .nav .nav__menu a img {
-  width: 10vw;
+  width: 4.5vw;
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 .container .nav .nav__fullscreen {
   position: fixed;
@@ -237,8 +237,6 @@ body span {
 .container .nav .nav__fullscreen .nav__menu-list {
   line-height: 2;
   position: absolute;
-  top: 10vh;
-  left: 10vw;
   -webkit-transform: translate(0px, -300%);
           transform: translate(0px, -300%);
   -webkit-transition: all 0.6s ease 0s;
@@ -248,8 +246,8 @@ body span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 9vh;
-  font-size: 10vw;
+  height: 15vh;
+  font-size: 4.5vw;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
@@ -258,15 +256,14 @@ body span {
   color: #fff;
 }
 .container .nav .nav__fullscreen .nav__menu-list li:hover {
-  font-size: 11vw;
+  font-size: 5vw;
 }
 .container .nav .nav__fullscreen .nav__menu-list li:hover a {
   color: #f76c6c;
 }
 .container .nav .nav__fullscreen .nav__fullscreen_pic img {
   position: absolute;
-  top: 50vh;
-  max-width: 90vw;
+  max-width: 32vw;
   -webkit-transform: translate(0px, 300%);
           transform: translate(0px, 300%);
   -webkit-transition: all 0.6s ease 0s;
@@ -274,23 +271,31 @@ body span {
 }
 .container .nav .nav__fullscreen .nav__fullscreen_close {
   position: absolute;
-  top: 10vh;
-  right: 15vw;
-  font-size: 10vw;
+  top: 15vh;
+  right: 10vw;
+  font-size: 5vw;
   text-decoration: none;
   color: #fff;
   z-index: 1;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
-  line-height: 2;
 }
-.container .nav .nav__fullscreen .nav__fullscreen_close:active {
+.container .nav .nav__fullscreen .nav__fullscreen_close:hover {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
 .container .game .inrodaction__first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 12vw;
   height: 100vh;
   font-weight: bold;
@@ -299,11 +304,8 @@ body span {
   line-height: 0.8;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_hello {
-  position: absolute;
-  top: 30vh;
-  left: 12vw;
   visibility: hidden;
-  font-size: 18vw;
+  font-size: 10vw;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_hello p {
   display: inline-block;
@@ -312,10 +314,7 @@ body span {
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_lets-play {
   visibility: hidden;
-  font-size: 20vw;
-  position: absolute;
-  top: 37.5vh;
-  left: 12vw;
+  font-size: 11vw;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_lets-play p {
   display: inline-block;
@@ -323,29 +322,42 @@ body span {
           animation: hello 2s ease 1 normal 1s forwards;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_lets-play p span {
-  font-size: 22vw;
+  font-size: 12.5vw;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_buttons {
   visibility: hidden;
-  position: absolute;
-  top: 70vh;
-  left: 12vw;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_fullscreen-button {
-  display: none;
+  font-size: 10vw;
+  color: #fff;
+  margin-bottom: 2.8vh;
+}
+.container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_fullscreen-button img {
+  padding: 1.5vw 12vw;
+  border: 0.4vh solid #fff;
+  -webkit-animation: lets__start_button 2s ease 1 normal running 2s forwards;
+          animation: lets__start_button 2s ease 1 normal running 2s forwards;
+  max-width: 31.6vw;
+}
+.container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_fullscreen-button img:hover {
+  background-color: rgba(55, 71, 133, 0.5);
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_start-button {
-  font-size: 15vw;
+  font-size: 10vw;
+  color: transparent;
+  -webkit-text-stroke: 2px #374785;
+  text-stroke: 2px #374785;
   margin-top: 2.8vh;
 }
-.container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_start-button:active {
-  background-color: #f76c6c;
+.container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_start-button:hover {
+  color: #374785;
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
 .container .game .inrodaction__first-section .inrodaction__first-section_buttons .inrodaction__first-section_start-button p {
-  color: #fff;
-  padding: 2vh 18.5vw;
+  padding: 0px 3vw;
   border: 0.4vh solid #374785;
   display: inline-block;
   -webkit-animation: lets__start_button 2s ease 1 normal running 2s forwards;
@@ -356,77 +368,71 @@ body span {
   opacity: 0;
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .container .game .inrodaction__second-section .inrodaction__second-section_hero img {
-  position: absolute;
-  top: 36vh;
-  max-height: 41vh;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  max-height: 70vh;
+  -webkit-transform: translate(0, -600px);
+          transform: translate(0, -600px);
   -webkit-transition: all 0.6s ease 0.2s;
   transition: all 0.6s ease 0.2s;
 }
 .container .game .inrodaction__second-section .introdaction__second-section_look {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100vw;
-  position: absolute;
-  top: 76vh;
-  padding: 8vw;
+  display: -ms-grid;
+  display: grid;
 }
 .container .game .inrodaction__second-section .introdaction__second-section_look img {
-  max-height: 7vh;
-  padding: 1vh 1vw;
-  margin: 0 0.6vw;
-  border: 0.4vw solid #fff;
+  max-height: 9vh;
+  padding: 2vh 1vw;
+  margin: 0.4vh 0;
+  border: 0.4vh solid #fff;
 }
 .container .game .inrodaction__second-section .introdaction__second-section_look p {
-  display: none;
+  font-size: 1vw;
+  padding: 1vw 0;
 }
 .container .game .inrodaction__second-section form {
   display: block;
-  width: 84%;
+  width: 40%;
   color: #f76c6c;
   -webkit-transform: translate(0, 600px);
           transform: translate(0, 600px);
   -webkit-transition: all 0.6s ease 0.2s;
   transition: all 0.6s ease 0.2s;
-  position: absolute;
-  top: 8vh;
-  left: 8vw;
-  line-height: 0.5;
 }
 .container .game .inrodaction__second-section form input {
   width: 100%;
   color: #f76c6c;
-  padding: 0vh;
+  padding: 1.5vh;
   text-align: center;
-  font-size: 10vw;
+  font-size: 5vw;
 }
 .container .game .inrodaction__second-section form .inrodaction__second-section_button_m {
-  padding: 0.5vh;
+  padding: 1.5vh;
   width: 49%;
   color: #fff;
-  font-size: 10vw;
+  font-size: 5vw;
   border: 0.4vh solid #f76c6c;
   background-color: transparent;
 }
-.container .game .inrodaction__second-section form .inrodaction__second-section_button_m:active span {
+.container .game .inrodaction__second-section form .inrodaction__second-section_button_m:hover span {
   color: #fff;
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
 .container .game .inrodaction__second-section form .inrodaction__second-section_button_f {
-  padding: 0.5vh;
+  padding: 1.5vh;
   width: 49%;
   color: #fff;
-  font-size: 10vw;
+  font-size: 5vw;
   border: 0.4vh solid #f76c6c;
   background-color: transparent;
 }
@@ -436,16 +442,16 @@ body span {
   transition: all 0.6s ease 0s;
 }
 .container .game .inrodaction__second-section form .inrodaction__second-section_button_go {
-  padding: 0.5vh;
+  padding: 1.5vh;
   width: 100%;
   color: transparent;
   -webkit-text-stroke: 1px #Fff;
   text-stroke: 1px #Fff;
-  font-size: 10vw;
+  font-size: 5vw;
   border: 0.4vh solid #f76c6c;
   background-color: transparent;
 }
-.container .game .inrodaction__second-section form .inrodaction__second-section_button_go:active {
+.container .game .inrodaction__second-section form .inrodaction__second-section_button_go:hover {
   color: #fff;
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
@@ -453,13 +459,15 @@ body span {
 .container .game .inrodaction__third-section {
   visibility: hidden;
   opacity: 0;
+  margin: 20vw auto;
   position: absolute;
-  top: 25vh;
-  left: 8vw;
-  width: 84%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
 }
 .container .game .inrodaction__third-section .inrodaction__third-section_text {
-  padding: 0.5vh;
+  padding: 1.5vh;
   color: white;
   border: 0.4vh solid white;
   -webkit-transform: translate(600px, 0px);
@@ -469,17 +477,17 @@ body span {
 }
 .container .game .inrodaction__third-section .inrodaction__third-section_hello {
   display: block;
-  font-size: 10vw;
+  font-size: 6.5vw;
   color: #f76c6c;
 }
 .container .game .inrodaction__third-section .inrodaction__third-section_rools {
   display: block;
-  font-size: 7vw;
+  font-size: 2.7vw;
 }
 .container .game .inrodaction__third-section button {
   display: block;
-  font-size: 10vw;
-  padding: 0.5vh;
+  font-size: 7vw;
+  padding: 1.5vh;
   color: transparent;
   -webkit-text-stroke: 1px #Fff;
   text-stroke: 1px #Fff;
@@ -492,7 +500,7 @@ body span {
   transition: all 0.6s ease 0.2s;
   background-color: transparent;
 }
-.container .game .inrodaction__third-section button:active {
+.container .game .inrodaction__third-section button:hover {
   color: #fff;
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
@@ -515,8 +523,8 @@ body span {
 .container .game .game__process .game__process_window {
   position: absolute;
   top: 15vh;
-  left: 0vw;
-  width: 100vw;
+  left: 10vw;
+  width: 80vw;
   height: 70vh;
   background-color: rgba(247, 108, 108, 0.5);
   border: 0.4vh solid #374785;
@@ -529,28 +537,28 @@ body span {
   opacity: 0.4;
 }
 .container .game .game__process .game__process_window .background-image img {
-  width: 100vw;
+  width: 80vw;
   height: 70vh;
 }
 .container .game .game__process .game__process_window .hero {
-  width: 7vw;
-  height: 10vh;
+  width: 5vw;
+  height: 8vh;
   position: absolute;
   left: 50%;
-  bottom: -6%;
+  bottom: 0%;
 }
 .container .game .game__process .game__process_window .hero img {
-  max-width: 10vw;
+  max-width: 5vw;
   height: auto;
 }
 .container .game .game__process .game__process_window .paper {
-  font-size: 1.5vw;
+  font-size: 0.8vw;
   overflow: hidden;
   padding: 0.4vw;
   -webkit-box-shadow: 0.4vh 0.4vh #374785;
           box-shadow: 0.4vh 0.4vh #374785;
-  width: 5vw;
-  height: 3vh;
+  width: 3vw;
+  height: 5vh;
   background-color: white;
   position: absolute;
   border-radius: 0.5vw;
@@ -562,31 +570,25 @@ body span {
 }
 .container .game .game__process .game__process_bar {
   position: absolute;
-  top: 90vh;
-  left: 5vw;
-  width: 90vw;
+  top: 86vh;
+  left: 10vw;
+  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 5vw;
+  font-size: 7.5vh;
   color: white;
 }
 .container .game .game__process .game__process_bar .game__process_bar-points {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .container .game .game__process .game__process_bar .game__process_bar-points img {
-  max-height: 7vh;
+  max-height: 13vh;
   width: auto;
 }
 .container .game .game__process .game__process_bar .game__process_bar-health {
@@ -596,7 +598,7 @@ body span {
 }
 .container .game .game__process .game__process_bar .game__process_bar-health img {
   display: block;
-  max-height: 7vh;
+  max-height: 13vh;
   width: auto;
 }
 .container .game .game__over {
@@ -605,32 +607,37 @@ body span {
 .container .game .game__over .game__over_window {
   position: absolute;
   top: 15vh;
-  left: 0vw;
-  width: 100vw;
+  left: 10vw;
+  width: 80vw;
   height: 70vh;
   background-color: white;
   border: 0.75vh solid #374785;
   overflow: hidden;
 }
 .container .game .game__over .game__over_window p {
-  padding: 3vw 8vw;
-  font-size: 10vw;
+  padding: 3vw 4vw;
+  font-size: 7vw;
 }
 .container .game .game__over .game__over_window .game__over_buttons {
-  position: absolute;
-  top: 15vh;
-  left: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .container .game .game__over .game__over_window .game__over_buttons button {
-  width: 100%;
-  margin: 5vh 3vw;
+  margin: 1vw 3vw;
   padding: 1vw;
   font-size: 9vw;
   background-color: white;
   color: #374785;
   border: 0.4vh solid #f76c6c;
 }
-.container .game .game__over .game__over_window .game__over_buttons button:active {
+.container .game .game__over .game__over_window .game__over_buttons button:hover {
   color: white;
   background-color: #f76c6c;
   -webkit-transition: all 0.5s ease 0s;

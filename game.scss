@@ -87,13 +87,15 @@ body {
                 display: block;
                 padding: 1vw;
 
+
                 &:hover img {
                     transform: rotateY(180deg);
-                    transition: all 0.6s ease 0s;
+
                 }
 
                 & img {
                     width: 4.5vw;
+                    transition: all 0.6s ease 0s;
                 }
             }
         }
@@ -141,14 +143,22 @@ body {
                 transform: translate(0px, -300%);
                 transition: all 0.6s ease 0s;
 
-                & a {
-                    color: #fff;
+                & li {
+                    a {
+                        color: #fff;
+                    }
+
+                    display:flex;
+                    height:15vh;
                     font-size: 4.5vw;
                     text-transform: uppercase;
                     transition: all 0.2s ease 0s;
 
                     &:hover {
-                        color: $red;
+                        a {
+                            color: $red;
+                        }
+
                         font-size: 5vw;
                     }
                 }
@@ -181,6 +191,7 @@ body {
 
     .game {
         .inrodaction__first-section {
+
             display: flex;
             justify-content: space-between;
             align-items: center;

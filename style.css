@@ -98,11 +98,11 @@ body h2 {
 .nav .nav__menu a:hover img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
 }
 .nav .nav__menu a img {
   width: 4.5vw;
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 .nav .nav__fullscreen {
   position: fixed;
@@ -150,16 +150,24 @@ body h2 {
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
-.nav .nav__fullscreen .nav__menu-list a {
-  color: #fff;
+.nav .nav__fullscreen .nav__menu-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 15vh;
   font-size: 4.5vw;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.nav .nav__fullscreen .nav__menu-list a:hover {
-  color: #f76c6c;
+.nav .nav__fullscreen .nav__menu-list li a {
+  color: #fff;
+}
+.nav .nav__fullscreen .nav__menu-list li:hover {
   font-size: 5vw;
+}
+.nav .nav__fullscreen .nav__menu-list li:hover a {
+  color: #f76c6c;
 }
 .nav .nav__fullscreen .nav__fullscreen_pic img {
   position: absolute;
@@ -510,10 +518,11 @@ body h2 {
   overflow: hidden;
 }
 .footer #background_video {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -610,9 +619,9 @@ body h2 {
 .footer .footer__contacts a:hover img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
 }
 .footer .footer__contacts img {
   height: 9vh;
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }

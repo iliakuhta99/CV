@@ -154,16 +154,24 @@ body h2 {
   -webkit-transition: all 0.6s ease 0s;
   transition: all 0.6s ease 0s;
 }
-.nav .nav__fullscreen .nav__menu-list a {
-  color: #fff;
+.nav .nav__fullscreen .nav__menu-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 9vh;
   font-size: 10vw;
   text-transform: uppercase;
   -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
-.nav .nav__fullscreen .nav__menu-list a:active {
-  color: #f76c6c;
+.nav .nav__fullscreen .nav__menu-list li a {
+  color: #fff;
+}
+.nav .nav__fullscreen .nav__menu-list li:hover {
   font-size: 11vw;
+}
+.nav .nav__fullscreen .nav__menu-list li:hover a {
+  color: #f76c6c;
 }
 .nav .nav__fullscreen .nav__fullscreen_pic img {
   position: absolute;
